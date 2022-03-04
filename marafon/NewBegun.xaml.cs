@@ -12,21 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Threading;
 
 namespace marafon
 {
-   
-    public partial class Sponsor_confirmation : Page
+    /// <summary>
+    /// Логика взаимодействия для NewBegun.xaml
+    /// </summary>
+    public partial class NewBegun : Page
     {
-        public Sponsor_confirmation()
+        public NewBegun()
         {
             InitializeComponent();
-            MainWindow mw = (MainWindow)Application.Current.MainWindow;
-            mw.Title = "Marathon skills 2016 - Sponsorship confirmation";
         }
-
-        private void Button_Click_Back(object sender, RoutedEventArgs e)
+        private void Button_Back12(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Page2());
         }
@@ -36,5 +34,4 @@ namespace marafon
 
         }
     }
-
 }

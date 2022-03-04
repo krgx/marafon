@@ -1,0 +1,267 @@
+﻿<Page x:Class="marafon.SponsorsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:marafon"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SponsorsPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="143*"/>
+            <ColumnDefinition Width="239*"/>
+            <ColumnDefinition Width="284*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="114*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="299*"/>
+        </Grid.RowDefinitions>
+        <!--Заголовок-->
+        <TextBlock HorizontalAlignment="Center" 
+                   TextWrapping="Wrap" 
+                   Text="Спонсор бегуна" 
+                   VerticalAlignment="Top" 
+                   Margin="83,10,234,0" 
+                   FontSize="22"
+                   FontWeight="Bold" 
+                   Height="36" Width="206" 
+                   Grid.ColumnSpan="2" 
+                   Grid.Column="1" 
+                   TextAlignment="Center"/>
+        <!--Описание-->
+        <TextBlock HorizontalAlignment="Left" 
+                   TextWrapping="Wrap"  
+                   VerticalAlignment="Top" 
+                   Margin="64,46,0,0" FontSize="14"
+                   Grid.ColumnSpan="3" 
+                   Height="63" 
+                   Width="534"> Пожалуйста, выберите бегуна, которого вы хотели бы спонсировать и сумму, 
+            <LineBreak> </LineBreak>
+            которую вы хотели бы спонсировать. 
+            Спасибо за вашу поддержку бегунов и их <LineBreak></LineBreak> 
+            благотворительных учрежденийю</TextBlock>
+        <!--Инфо и Благотворительность-->
+        <TextBlock HorizontalAlignment="Center" 
+                   TextWrapping="Wrap" 
+                   Text="Информация о спонсоре" 
+                   VerticalAlignment="Center" Grid.Row="1" 
+                   Grid.ColumnSpan="2"
+                   FontSize="18" 
+                   FontWeight="Bold" 
+                   Height="24" 
+                   Width="255"/>
+        <TextBlock HorizontalAlignment="Center" 
+                   TextWrapping="Wrap" 
+                   Text="Благотворительность" 
+                   VerticalAlignment="Center"
+                   Grid.Column="2" 
+                   Grid.Row="1"
+                   FontSize="18"
+                   FontWeight="Bold" 
+                   Height="24" 
+                   Width="193"/>
+        
+        <TextBlock HorizontalAlignment="Right"
+                   TextWrapping="Wrap" 
+                   Text="Ваше имя:"
+                   VerticalAlignment="Top"
+                   Margin="0,10,0,0" 
+                   Grid.Row="2"
+                   Width="64" 
+                   Height="16"/>
+        <TextBlock HorizontalAlignment="Right" 
+                   TextWrapping="Wrap" 
+                   Text="Бегун:" 
+                   VerticalAlignment="Top" 
+                   Margin="0,48,25,0" 
+                   Grid.Row="2" 
+                   Height="16" 
+                   Width="41"/>
+        <TextBlock HorizontalAlignment="Right" 
+                   TextWrapping="Wrap" 
+                   Text="Карта:" 
+                   VerticalAlignment="Top" 
+                   Margin="0,87,-20,0" 
+                   Grid.Row="2"
+                   Width="88" 
+                   Height="16"/>
+        <TextBlock HorizontalAlignment="Right"
+                   TextWrapping="Wrap" 
+                   Text="Номер карты:"
+                   VerticalAlignment="Top" 
+                   Margin="0,138,-10,0" 
+                   Grid.Row="2"
+                   Width="76"
+                   Height="16"/>
+        <TextBlock HorizontalAlignment="Right"
+                   TextWrapping="Wrap"
+                   Text="Срок действия:" 
+                   VerticalAlignment="Top" 
+                   Margin="0,188,-10,0" 
+                   Grid.Row="2" 
+                   Width="69" 
+                   Height="16"/>
+        <TextBlock TextWrapping="Wrap"
+                   Text="CVV:" VerticalAlignment="Top" 
+                   Margin="0,241,3,0" Grid.Row="2"
+                   HorizontalAlignment="Right" 
+                   Height="16"
+                   Width="25"/>
+        <TextBox HorizontalAlignment="Left"
+                 Height="23" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top"
+                 Width="220" 
+                 Grid.Column="1" 
+                 Margin="10,12,0,0" 
+                 Grid.Row="2"
+                 TextChanged="lol_TextChanged"
+                  
+                 Tag="Your Name"/>
+        <TextBox HorizontalAlignment="Left" 
+                 Height="23" 
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top" 
+                 Width="220"
+                 Name="card"
+                 MaxLength="16"
+                 TextChanged="card_TextChanged"
+                 Grid.Column="1" 
+                 Margin="10,86,0,0" 
+                 Grid.Row="2"
+                 
+                 Tag="Credit card holder"/>
+        <TextBox HorizontalAlignment="Left" 
+                 Height="23" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top"
+                 Width="220" Grid.Column="1"
+                 TextChanged="Number_TextChanged"
+                 Margin="10,137,0,0" 
+                 Grid.Row="2" 
+                 MaxLength="19"
+                />
+        <TextBox HorizontalAlignment="Left" 
+                 Height="23" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="35" Grid.Column="1"
+                 Margin="10,187,0,0" 
+                 TextChanged="srok_TextChanged"
+                 Grid.Row="2" 
+                 MaxLength="4"
+                 />
+        <TextBox HorizontalAlignment="Left" 
+                 Height="23" 
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top" 
+                 Width="60" Grid.Column="1" 
+                 Margin="50,187,0,0" 
+                 TextChanged="srok_TextChanged"
+                 Grid.Row="2" 
+                 MaxLength="4"
+                 />
+        <TextBox HorizontalAlignment="Left"
+                 Height="23" 
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="60"
+                 Grid.Column="1"
+                 Margin="10,240,0,0" 
+                 Grid.Row="2" 
+                 TextChanged="cvv_TextChanged"
+                 MaxLength="3"
+                 />
+        <ComboBox HorizontalAlignment="Left"
+                  VerticalAlignment="Top"
+                  Width="220"
+                  Name="chagebegun"
+                  Grid.Column="1" 
+                  Margin="10,48,0,0"
+                  Grid.Row="2"
+                  Height="22" SelectionChanged="ListBegunov"/>
+        <TextBlock HorizontalAlignment="Center"
+                   TextWrapping="Wrap" 
+                   Text="Фонд кошелька"
+                   VerticalAlignment="Top" 
+                   Grid.Column="2"
+                   Margin="0,13,0,0" 
+                   Grid.Row="2" 
+                   FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left"
+                   TextWrapping="Wrap" 
+                   Text="Сумма пожертвования" 
+                   VerticalAlignment="Top"
+                   Grid.Column="2"
+                   Margin="40,89,0,0"
+                   Grid.Row="2" FontSize="18" 
+                   FontWeight="Bold" 
+                   Height="24"
+                   Width="225"/>
+        <!--Выбор суммы-->
+        <TextBlock HorizontalAlignment="Center"
+                   TextWrapping="Wrap" 
+                   
+                   Text="{Binding ElementName=txtDonate,Path=Text}"
+                   VerticalAlignment="Top"
+                   Grid.Column="2" 
+                   Margin="0,102,0,0" Grid.Row="2" 
+                   FontSize="48" 
+                   Name="dollar"
+                   
+                   FontWeight="Bold"/>
+        <!--Кнопочки для выбора суммы-->
+        <StackPanel HorizontalAlignment="Center"
+                    Orientation="Horizontal"
+                    Height="25" 
+                    VerticalAlignment="Top" 
+                    Width="182" 
+                    Grid.Column="2" 
+                    Margin="0,181,0,0" 
+                    Grid.Row="2" >
+            <Button x:Name="btnMinus" 
+                    Content="-" 
+                    HorizontalAlignment="Left" 
+                    Width="30" 
+                    Click="minus_Click"/>
+            <TextBox x:Name="txtDonate" 
+                     TextWrapping="Wrap" 
+                     Width="120"
+                     HorizontalContentAlignment="Center" 
+                     VerticalContentAlignment="Center"/>
+            <Button x:Name="Plus" 
+                    Content="+" 
+                    HorizontalAlignment="Left" 
+                    Width="30" 
+                    Click="plus_Click"/>
+        </StackPanel>
+        <!--Кнопки заплатить отменить и фонд кошелька-->
+        <Button Content="Заплатить" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                Width="100" Grid.Column="2" 
+                Margin="40,237,0,0" 
+                Grid.Row="2" 
+                Height="30"
+                Click="Button_Click_Zaplatit"/>
+        <Button Content="Отменить"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" 
+                Width="100" Grid.Column="2" 
+                Margin="155,237,0,0" 
+                Grid.Row="2"
+                Click="Button_Click_Otmena"
+                Height="30"/>
+        <Button Content="info" 
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" Width="25" 
+                Grid.Column="2" Margin="226,15,0,0" 
+                Grid.Row="2" Height="19" 
+                Click="Button_Click"/>
+
+
+    </Grid>
+</Page>

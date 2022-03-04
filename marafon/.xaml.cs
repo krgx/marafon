@@ -54,12 +54,17 @@ namespace marafon
         {
             DateTime dateTime = DateTime.Now;
             TimeSpan today = new TimeSpan(dateTime.Day, dateTime.Hour, dateTime.Minute, dateTime.Second);
-            TimeSpan timeSpan = new TimeSpan(5, 18, 50, 0);
+            TimeSpan timeSpan = new TimeSpan(6, 18, 50, 0);
             TimeSpan countDate = timeSpan.Subtract(today);
 
             Day.Text = countDate.Days.ToString();
             Hours.Text = countDate.Hours.ToString();
             Minute.Text = countDate.Minutes.ToString();
+        }
+
+        private void Button_Click_Sponsor(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new SponsorsPage());
         }
     }
 }

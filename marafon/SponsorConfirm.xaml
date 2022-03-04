@@ -142,7 +142,7 @@
                     FontSize="20px"                    
                     FontWeight="ExtraLight"
                     Style="{DynamicResource ButtonStyleRadius2}"
-                    
+                        Click="Button_Click_Back"
                     
 
                     >
@@ -219,7 +219,7 @@
                     Padding="1" 
                     Margin="0 0 0 15"
                     FontSize="25" Foreground="#FFB4B4B4"   
-                    >Иван Прудов(204) из Russia
+                    >
             </TextBlock>
 
             <TextBlock
@@ -228,7 +228,7 @@
                     FontSize="27" 
                     Foreground="#FFB4B4B4"  
                     HorizontalAlignment="Center"
-                    >Фонд кошек</TextBlock>
+                    ></TextBlock>
         </StackPanel>
         <!-- Buttons  Cancel -->
         <StackPanel Grid.Row="2" Grid.Column="1" 
@@ -245,7 +245,7 @@
                     FontFamily="Open Sans Light"
                     FontSize="20"
                     Style="{DynamicResource ButtonStyleRadius2}"
-                    
+                    Click="Button_Click_Back"
                 />
 
         </StackPanel>

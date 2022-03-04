@@ -229,7 +229,7 @@
                     ></TextBox>
 
             <TextBox
-                    x:Name="password" 
+                    x:Name="pass" 
                     Height="30" Padding="1" 
                     FontSize="18"
                     />

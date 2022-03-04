@@ -16,30 +16,21 @@ using System.Windows.Threading;
 
 namespace marafon
 {
-   
-    public partial class MenuBeguna : Page
+    
+    public partial class RunnerPage : Page
     {
         readonly DispatcherTimer timer = new DispatcherTimer();
-        public MenuBeguna()
+        public RunnerPage()
         {
             InitializeComponent();
-            //Заголовок
-            MainWindow mw = (MainWindow)Application.Current.MainWindow;
-            mw.Title = "Marathon skills 2016 - Registr as a runner";
-            //Таймер
             TimerStarter();
         }
 
-        
+
         //Навигация
         private void Button_Click_Back(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Page2());
-        }
-
-        private void Button_Click_Begun(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Registr());
         }
 
         private void Button_Click_Login(object sender, RoutedEventArgs e)
@@ -47,7 +38,8 @@ namespace marafon
             NavigationService.Navigate(new Registr());
         }
 
-        
+
+
         //Таймер
         public void TimerStarter()
         {
@@ -66,11 +58,6 @@ namespace marafon
             Day.Text = countDate.Days.ToString();
             Hours.Text = countDate.Hours.ToString();
             Minute.Text = countDate.Minutes.ToString();
-        }
-
-        private void Button_Click_Reg(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new NewBegun());
         }
     }
 }

@@ -70,20 +70,26 @@
     <Compile Include="MostInform.xaml.cs">
       <DependentUpon>MostInform.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Login Runner. admin and Coord\RunnerPage.xaml.cs">
+    <Compile Include="pageclients\RunnerPage.xaml.cs">
       <DependentUpon>RunnerPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Login Runner. admin and Coord\CoordPage.xaml.cs">
+    <Compile Include="pageclients\CoordPage.xaml.cs">
       <DependentUpon>CoordPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Login Runner. admin and Coord\AdminPage.xaml.cs">
+    <Compile Include="pageclients\AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewBegun.xaml.cs">
+      <DependentUpon>NewBegun.xaml</DependentUpon>
     </Compile>
     <Compile Include="SponsorBegun.xaml.cs">
       <DependentUpon>SponsorBegun.xaml</DependentUpon>
     </Compile>
     <Compile Include="SponsorConfirm.xaml.cs">
       <DependentUpon>SponsorConfirm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SponsorsPage.xaml.cs">
+      <DependentUpon>SponsorsPage.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -101,15 +107,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Login Runner. admin and Coord\RunnerPage.xaml">
+    <Page Include="pageclients\RunnerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Login Runner. admin and Coord\CoordPage.xaml">
+    <Page Include="pageclients\CoordPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Login Runner. admin and Coord\AdminPage.xaml">
+    <Page Include="pageclients\AdminPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewBegun.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -138,6 +148,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SponsorConfirm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SponsorsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

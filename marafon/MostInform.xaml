@@ -107,7 +107,7 @@
 
     <Grid Background="White">
        
-        <!-- Сетка по вертикали -->
+        
         <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
@@ -115,7 +115,7 @@
 
 
             </Grid.RowDefinitions>
-        <!-- Сетка по горизантали -->
+        
         <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -124,14 +124,14 @@
 
             </Grid.ColumnDefinitions>
 
-        <!-- Верхняя часть страницы/ задний фон -->
+        <!-- Верх страницы -->
         <StackPanel Grid.ColumnSpan="5"
                     Height="80px"
                     VerticalAlignment="Top"
                     Background="#FF505050"
             >
 
-                <!-- Кнопка "назад"-->
+                <!-- Кнопка назад-->
                 <Button Width="80px"
                     HorizontalAlignment="Left"
                     Height="40"
@@ -167,7 +167,7 @@
 
             </StackPanel>
         
-        <!--TB MostInf-->
+        <!--Заголовок -->
         <StackPanel Grid.Column="1" Grid.ColumnSpan="2"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Left"
@@ -181,7 +181,7 @@
 
         </StackPanel>
 
-        <!-- Buttons Left Stolbik-->
+        <!-- кнопки слева-->
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2"
                     HorizontalAlignment="Center" Orientation="Vertical" VerticalAlignment="Center"
             
@@ -233,7 +233,7 @@
 
 
 
-        <!-- Buttons Right Stolbik-->
+        <!-- кнопки справа -->
         <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="1"
                     HorizontalAlignment="Center" Orientation="Vertical" VerticalAlignment="Center"
             
@@ -268,7 +268,7 @@
 
             </Button>
 
-            <!--BMI Calculate-->
+            <!--BMR Calculate-->
             <Button Width="200" Height="60"
                     Style="{DynamicResource ButtonStyleRadius2}"
                     Margin="0 0 0 20"
@@ -285,7 +285,7 @@
             </Button>
         </StackPanel>
 
-        <!-- Зайдний фон нижней панели -->
+        <!-- Бекграунд низа -->
         <StackPanel Grid.Row="2" Grid.ColumnSpan="3"
                     Background="#FF505050"
                     VerticalAlignment="Bottom"

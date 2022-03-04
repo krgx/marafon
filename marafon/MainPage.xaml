@@ -10,6 +10,7 @@
       WindowTitle="Marathon Skills 2016"
       
       >
+    <!--Стили-->
     <Page.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -107,6 +108,7 @@
 
     
     <Grid Background="White">
+        <!--разметка-->
         <Grid.RowDefinitions>
             <RowDefinition Height="25*" ></RowDefinition>
             <RowDefinition Height="50*" ></RowDefinition>
@@ -130,7 +132,7 @@
                         Margin="0,40,0,11" FontSize="30"
                         >MARATHON SKILLS 2016</TextBlock>
 
-            <TextBlock FontFamily="Open Sans Semibold"
+            <TextBlock FontFamily="Arial"
                        Foreground="#FFB4B4B4"
                        HorizontalAlignment="Center"
                        FontStyle="Italic" FontSize="20"
@@ -158,6 +160,7 @@
                     Background="#FFEBEBEB"
                     Foreground="#FF505050"
                     FontSize="18"
+                    Click="Button_Click_Sponsor"
                     Style="{DynamicResource ButtonStyleRadius2}">
                 Я хочу стать спонсором
             </Button>
@@ -173,7 +176,7 @@
         </StackPanel>
         
 
-
+        <!--Логин-->
         <Button     
                     VerticalAlignment="Bottom"
                     Margin="0 0 0 20"
@@ -187,7 +190,7 @@
             Login
         </Button>
         
-        <!-- Зайдний фон нижней панели -->
+        <!-- Нижняя панель -->
         <StackPanel Grid.Row="2" Grid.ColumnSpan="5"
                     Background="#FF505050"
                     >

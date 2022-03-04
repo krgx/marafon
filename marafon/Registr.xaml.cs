@@ -69,7 +69,7 @@ namespace marafon
         {
             DateTime dateTime = DateTime.Now;
             TimeSpan today = new TimeSpan(dateTime.Day, dateTime.Hour, dateTime.Minute, dateTime.Second);
-            TimeSpan timeSpan = new TimeSpan(5, 18, 50, 0);
+            TimeSpan timeSpan = new TimeSpan(8, 18, 50, 0);
             TimeSpan countDate = timeSpan.Subtract(today);
 
             Day.Text = countDate.Days.ToString();
@@ -79,17 +79,25 @@ namespace marafon
 
         //Server=bebramq.mssql.somee.com; Database=bebramq; User Id = bebramanger_SQLLogin_1; Password=qzkwsnbv5g;
 
+        //string connectionString = "Server=bebramq.mssql.somee.com;Database=bebramq;User Id = bebramanger_SQLLogin_1;Password=qzkwsnbv5g;"
+
+
+        //string sqlExpression = "SELECT * FROM[User] WHERE Email = @email AND Password = @Password AND RoleId = @role     " ;
+
+
+
+
+
 
 
         //Авторизаия к базе)
         public void Login()
         {
 
-
             string connectionString = "Server=bebramq.mssql.somee.com;Database=bebramq;User Id = bebramanger_SQLLogin_1;Password=qzkwsnbv5g;";
 
-
-            string sqlExpression = "SELECT * FROM[User] WHERE Email = @email AND Password = @Password";
+            List<string> list = new List<string>();
+            string sqlExpression = "SELECT * FROM[User] WHERE Email = @email AND Password = @Password ";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -99,33 +107,47 @@ namespace marafon
                 //Логин
                 SqlParameter loginParam = new SqlParameter("@email", login.Text);
                 command.Parameters.Add(loginParam);
-                
+
                 //Пароль
-                SqlParameter passParam = new SqlParameter("@Password", password.Text);
+                SqlParameter passParam = new SqlParameter("@Password", pass.Text);
                 command.Parameters.Add(passParam);
-                
+
                 SqlDataReader reader = command.ExecuteReader();
-
-
-                if (reader.HasRows) // если есть данные
-                    {
-                    NavigationService.Navigate(new RunnerPage());
-                    }
-                    //else if (reader.())
-                    //{
-
-                    //}
-                        else
-                        {
-                        
-                        }
                 
+                
+                if (reader.HasRows)
+                   
+                {
+                  while (reader.Read())
+                  {
+                   list.Add( Convert.ToString(reader["RoleId"]));
+                       
+                  }
+                    
+                }
 
+                if (list.Count == 0) // если 
+                {
+                    login.Clear();
+                    pass.Clear();
+                    MessageBox.Show("Логин или пароль неверен");
+                }
 
-                reader.Close();
-                connection.Close();
+                else if (list[0] == "A") // если есть данные
+                {
+                    NavigationService.Navigate(new AdminPage());
+                }
+                else if (list[0] == "С") // если есть данные
+                {
+                    NavigationService.Navigate(new CoordPage());
+                }
+                else if (list[0] == "R") // если есть данные
+                {
+                    NavigationService.Navigate(new RunnerPage());
+                }
             }
         }
-
     }
-} 
+}
+
+    
